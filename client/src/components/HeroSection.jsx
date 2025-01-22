@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import herobg from "./hero-bg.svg";
-import HeroSectionImg from "../assets/HeroSectionImg.svg";
+
 import HeroSectionVideo from "../assets/video.mp4";
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
