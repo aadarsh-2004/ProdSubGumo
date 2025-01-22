@@ -7,6 +7,7 @@ import { Footer } from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import IForm from "./components/IForm";
 import Destinations from "./components/Destinations";
+
 function App() {
   return (
     <>

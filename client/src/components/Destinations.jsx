@@ -119,7 +119,7 @@ export default function Destinations() {
 
                     <div className="flex justify-between text-sm text-gray-500 border-t pt-4">
                       <span>{destination.duration}</span>
-                      <span>1000 Kms</span>
+                      <span>1350 Kms</span>
                     </div>
 
                     {destination.isGroupTour && (
