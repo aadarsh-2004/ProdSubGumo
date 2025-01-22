@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Calendar, Send, User, Mail, Phone, MapPin, Users, MessageSquare } from 'lucide-react';
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom'; // Import for navigation
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const IForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -22,8 +22,9 @@ const IForm = () => {
     e.preventDefault();
 
     try {
+      
       // Send form data to the backend
-      const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/send-email`, formData);
+      const response = await axios.post(`${API_BASE_URL}/send-email`, formData);
       setShowPopup(true); // Show popup on success
 
       // Reset form data
