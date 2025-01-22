@@ -22,7 +22,7 @@ const HeroSection = () => {
             <h1 className="text-[25px] md:text-[60px] font-extrabold leading-tight mb-6 animate-slide-in">
               Discover new <span className="bg-gradient-to-r from-purple-600 to-orange-600 bg-clip-text text-clip-border text-transparent ">destinations</span>, experiences, and cultures with us
             </h1>
-            <p className="text-[8px] md:text-[17px]">
+            <p className="text-[7px] md:text-[17px]">
         Your gateway to{' '}
         <span className=" font-semibold">unparalleled</span>{' '}
         travel experiences. We're a team of{' '}
@@ -32,7 +32,7 @@ const HeroSection = () => {
         of our world.
       </p>
       
-      <p className="text-[8px] md:text-[17px]">
+      <p className="text-[7px] md:text-[17px]">
         We'll take you on a journey that will leave you with{' '}
         <span className="text-amber-600 font-semibold">unforgettable</span>{' '}
         memories.
