@@ -58,7 +58,7 @@ export const DestinationsData = [
     subTitle:
       "Nestled in the northernmost region of India, Kashmir is renowned as Paradise on Earth for its breathtaking landscapes, serene valleys, and majestic mountains. Surrounded by the snow-capped peaks of the Himalayas and the Pir Panjal range, Kashmir is a haven for nature lovers, adventure seekers, and peace enthusiasts.",
     originalCost: "30000",
-    cost: "14,999/-",
+    cost: "14999",
     duration: "Approx 5 Days trip",
     isUpcoming: false,
     description: "Discover the Paradise of India: Kashmir  Nestled in the lap of the majestic Himalayas, Kashmir is a land of unparalleled beauty, often referred to as Paradise on Earth. With its snow-capped peaks, lush green valleys, sparkling rivers, and serene lakes, Kashmir offers an enchanting escape for travelers seeking tranquility and adventure.",
