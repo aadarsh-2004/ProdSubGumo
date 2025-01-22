@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import herobg from "./hero-bg.svg";
 import HeroSectionImg from "../assets/HeroSectionImg.svg";
+import HeroSectionVideo from "../assets/video.mp4";
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -43,13 +44,16 @@ const HeroSection = () => {
           </div>
 
           {/* Animated Image Section */}
-          <div className="w-1/2 md:w-6/12 relative text-center md:text-right overflow-hidden">
-            <div className="animate-bounce-slow">
-              <img
-                className="ml-8 pt-0  w-[600px] md:pt-0 max-w-full transition-transform hover:scale-105 duration-300"
-                src={HeroSectionImg}
-                alt="hero-header"
-              />
+          <div className="w-1/2  md:w-5/12 p-4 relative text-center md:text-right overflow-hidden">
+            <div className="">
+            <video
+            className="ml-2  rounded-full pt-0 w-[700px] md:pt-0 max-w-full transition-transform hover:scale-105 duration-300"
+            src={HeroSectionVideo} // Replace this with your video source file path
+            autoPlay
+            muted
+            loop
+            playsInline // Ensures compatibility on mobile browsers
+    />
             </div>
 
             {/* Decorative Elements */}
