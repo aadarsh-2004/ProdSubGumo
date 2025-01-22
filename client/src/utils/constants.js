@@ -10,7 +10,7 @@ import GoaCoverImg from "../assets/GoaCoverImg.jpg";
 import GoaInfoImg from "../assets/GoaInfoImg.jpg";
 
 import KerelaInfoImg from "../assets/KerelaInfoImg.jpg";
-import kerelaCoverImg from "../assets/kerelaCoverImg.jpg";
+import KerelaCoverImg from "../assets/KerelaCoverImg.jpg";
 
 import UdaipurInfoImg from "../assets/UdaipurInfoImg.jpg";
 import UdaipurCoverImg from "../assets/UdaipurCoverImg.jpg";
@@ -513,7 +513,7 @@ export const DestinationsData = [
   {
     id: 7,
     name: "Kerala",
-    Cardimg: kerelaCoverImg,
+    Cardimg: KerelaCoverImg,
     img: KerelaInfoImg,
     title: "केरल दर्शन",
     CardsubTitle: "Backwaters, Beaches, and Beautiful Traditions",
