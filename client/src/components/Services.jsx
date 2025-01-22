@@ -33,7 +33,9 @@ const ServicesCard = ({ icon, title, subTitle, gradient, iconBg }) => (
         <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-900 transition-colors duration-300">
           {title}
         </h3>
-        <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 leading-relaxed">
+        <p 
+          className="hidden sm:block text-gray-600 group-hover:text-gray-700 transition-colors duration-300 leading-relaxed"
+        >
           {subTitle}
         </p>
       </div>
@@ -107,7 +109,7 @@ export default function Services() {
       </div>
 
       {/* Services Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-2  md:grid-cols-2 lg:grid-cols-4 gap-8">
         {services.map((service, index) => (
           <ServicesCard key={index} {...service} />
         ))}
