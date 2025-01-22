@@ -15,8 +15,8 @@ import KerelaCoverImg from "../assets/KerelaCoverImg.jpg";
 import UdaipurInfoImg from "../assets/UdaipurInfoImg.jpg";
 import UdaipurCoverImg from "../assets/UdaipurCoverImg.jpg";
 
-import NainitalInfoImg from "../assets/NainitalInfoImg.jpg";
-import NainitalCardImg from "../assets/NainitalCardImg.jpg";
+import NainitalInfoImg from "../assets/nainitalInfoImg.jpg";
+import NainitalCardImg from "../assets/nainitalCardImg.jpg";
 
 import RishikeshInfoImg from "../assets/RishikeshInfoImg.jpg";
 import RishikeshCardImg from "../assets/RishikeshCardImg.jpg";
