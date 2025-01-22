@@ -3,7 +3,9 @@ import axios from 'axios';
 import { Calendar, Send, User, Mail, Phone, MapPin, Users, MessageSquare } from 'lucide-react';
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom'; // Import for navigation
+
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 const IForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -16,16 +18,19 @@ const IForm = () => {
   });
 
   const [showPopup, setShowPopup] = useState(false); // Popup state
+  const [loading, setLoading] = useState(false); // Loading state
   const navigate = useNavigate(); // For navigation
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Show loading popup
 
     try {
-      
       // Send form data to the backend
       const response = await axios.post(`${API_BASE_URL}/send-email`, formData);
-      setShowPopup(true); // Show popup on success
+
+      setLoading(false); // Hide loading popup
+      setShowPopup(true); // Show success popup
 
       // Reset form data
       setFormData({
@@ -44,6 +49,7 @@ const IForm = () => {
         navigate('/'); // Redirect to /home
       }, 2000);
     } catch (error) {
+      setLoading(false); // Hide loading popup
       console.error('Error sending email:', error);
       alert('Failed to send inquiry. Please try again later.');
     }
@@ -218,7 +224,17 @@ const IForm = () => {
         </div>
       </div>
 
-      {/* Popup Modal */}
+      {/* Loading Popup */}
+      {loading && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-lg p-6 text-center shadow-xl">
+            <h2 className="text-xl font-bold text-gray-700 mb-4">Sending Inquiry...</h2>
+            <p className="text-gray-500">Please wait while we process your request.</p>
+          </div>
+        </div>
+      )}
+
+      {/* Success Popup */}
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-lg p-6 text-center shadow-xl">
