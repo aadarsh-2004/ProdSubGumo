@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import herobg from "./hero-bg.svg";
-import HeroSectionImg from "../assets/HeroSectionImg.svg";
+
 import HeroSectionVideo from "../assets/video.mp4";
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -44,7 +44,7 @@ const HeroSection = () => {
           </div>
 
           {/* Animated Image Section */}
-          <div className="w-1/2  md:w-5/12 p-4 relative text-center md:text-right overflow-hidden">
+          <div className="w-1/2 right-1 md:right-8  md:w-5/12 p-4 relative text-center md:text-right overflow-hidden">
             <div className="">
             <video
             className="ml-2  rounded-full pt-0 w-[700px] md:pt-0 max-w-full transition-transform hover:scale-105 duration-300"
