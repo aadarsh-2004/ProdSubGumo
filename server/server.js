@@ -17,7 +17,7 @@ app.post('/send-email', async (req, res) => {
       service: 'gmail', // You can use other services like Outlook, Yahoo, etc.
       auth: {
         user: 'sabgumo01@gmail.com', // Replace with your email
-        pass: 'zqjgbuxvrdomyflw', // Replace with your email password or app password
+        pass: 'ukysfisvumbemtem', // Replace with your email password or app password
       },
     });
 
