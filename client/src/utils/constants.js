@@ -18,8 +18,8 @@ import UdaipurCoverImg from "../assets/UdaipurCoverImg.jpg";
 import NainitalInfoImg from "../assets/nainitalInfoImg.jpg";
 import NainitalCardImg from "../assets/nainitalCardImg.jpg";
 
-import RishikeshInfoImg from "../assets/RishikeshInfoImg.jpg";
-import RishikeshCardImg from "../assets/RishikeshCardImg.jpg";
+// import RishikeshInfoImg from "../assets/RishikeshInfoImg.jpg";
+// import RishikeshCardImg from "../assets/RishikeshCardImg.jpg";
 
 import { Sun, Sunset, Moon } from "lucide-react";
 
