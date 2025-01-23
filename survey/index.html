@@ -71,16 +71,41 @@
             e.preventDefault();
             const formData = new FormData(form);
             
+            // Add loading state to button
+            const submitButton = form.querySelector('button');
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Submitting...';
+
+            // Set up timeout
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 10000);
+
             fetch(scriptURL, {
                 method: 'POST',
-                body: formData
+                body: formData,
+                signal: controller.signal
             })
             .then(response => {
+                clearTimeout(timeoutId);
+                // Always redirect, log if needed
+                console.log('Submission response:', response);
                 window.location.href = 'https://www.sabgumo.com';
             })
             .catch(error => {
+                clearTimeout(timeoutId);
+                
+                // Reset button state
+                submitButton.disabled = false;
+                submitButton.innerHTML = 'Submit';
+
+                if (error.name === 'AbortError') {
+                    alert('Request timed out. Please check your internet connection.');
+                } else {
+                    console.error('Submission error:', error);
+                }
+                
+                // Still redirect in case of error
                 window.location.href = 'https://www.sabgumo.com';
-                console.error('Error!', error.message);
             });
         });
     </script>
