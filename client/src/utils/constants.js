@@ -258,7 +258,7 @@ export const DestinationsData = [
     description:
       "Tucked away in the picturesque Kullu Valley, Manali is a serene haven that blends natural beauty, adventure, and tranquility. Surrounded by snow-covered peaks, dense pine forests, and gushing rivers, Manali is a destination that appeals to both thrill-seekers and peace-lovers alike.",
     mapsIframe:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1036.8074022026033!2d76.4038594499299!3d31.633345308943166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b2a7b793adcfd%3A0x5e65f5500e37035e!2sManali!5e0!3m2!1sen!2sin!4v1737195230919!5m2!1sen!2sin",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26997.53251957031!2d77.16652018879597!3d32.23947037911133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39048708163fd03f%3A0x8129a80ebe5076cd!2sManali%2C%20Himachal%20Pradesh!5e0!3m2!1sen!2sin!4v1737605286992!5m2!1sen!2sin",
     itineraryData: [
       {
         day: 1,
@@ -331,7 +331,7 @@ export const DestinationsData = [
     description:
       "Experience the perfect blend of beaches, culture, and nightlife in India's party capital.",
     mapsIframe:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1036.8074022026033!2d76.4038594499299!3d31.633345308943166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b2a7b793adcfd%3A0x5e65f5500e37035e!2sGoa!5e0!3m2!1sen!2sin!4v1737195230919!5m2!1sen!2sin",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d492479.75883484766!2d73.67703131829707!3d15.349486356776588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfba106336b741%3A0xeaf887ff62f34092!2sGoa!5e0!3m2!1sen!2sin!4v1737605204981!5m2!1sen!2sin",
     itineraryData: [
       {
         day: 1,
