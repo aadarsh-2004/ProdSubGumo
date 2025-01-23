@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SabGumo Travel Survey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-orange-100 via-purple-100 to-orange-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white/80 backdrop-blur-md w-full max-w-md mx-auto rounded-xl shadow-2xl p-6">
+        <h1 class="text-center text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-red-600">SabGumo</h1>
+        <h2 class="text-xl font-semibold mb-6 text-center text-gray-800">Where do you want to visit in next 3 months?</h2>
+        
+        <form id="surveyForm" class="space-y-4">
+            <div class="grid grid-cols-3 gap-3">
+                <div class="destination-card cursor-pointer" data-destination="Kashmir">
+                    <div class="border rounded-lg p-3 text-center hover:bg-blue-100 transition">
+                        <span class="block text-lg font-medium text-gray-700">Kashmir</span>
+                    </div>
+                </div>
+                <div class="destination-card cursor-pointer" data-destination="Shimla">
+                    <div class="border rounded-lg p-3 text-center hover:bg-blue-100 transition">
+                        <span class="block text-lg font-medium text-gray-700">Shimla</span>
+                    </div>
+                </div>
+                <div class="destination-card cursor-pointer" data-destination="Manali">
+                    <div class="border rounded-lg p-3 text-center hover:bg-blue-100 transition">
+                        <span class="block text-lg font-medium text-gray-700">Manali</span>
+                    </div>
+                </div>
+            </div>
+
+            <input type="hidden" id="selectedDestination" name="destination">
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Email or Mobile Number</label>
+                <input 
+                    type="text" 
+                    id="contact" 
+                    name="contact" 
+                    required 
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-300"
+                >
+            </div>
+
+            <button 
+                type="submit" 
+                class="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white py-3 rounded-md hover:opacity-90 transition-opacity"
+            >
+                Submit
+            </button>
+        </form>
+    </div>
+
+    <script>
+        const destinationCards = document.querySelectorAll('.destination-card');
+        const selectedDestinationInput = document.getElementById('selectedDestination');
+
+        destinationCards.forEach(card => {
+            card.addEventListener('click', () => {
+                destinationCards.forEach(c => c.querySelector('div').classList.remove('bg-blue-200'));
+                card.querySelector('div').classList.add('bg-blue-200');
+                selectedDestinationInput.value = card.dataset.destination;
+            });
+        });
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwXYRv528k3pENeQRq1NWriw7d5cCzRfZTSKyRtsqDG7hzW23rnNSr7SG8go2JHtnNF/exec';
+        const form = document.getElementById('surveyForm');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            
+            fetch(scriptURL, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                window.location.href = 'https://www.sabgumo.com';
+            })
+            .catch(error => {
+                window.location.href = 'https://www.sabgumo.com';
+                console.error('Error!', error.message);
+            });
+        });
+    </script>
+</body>
+</html>
