@@ -12,20 +12,28 @@
         <h2 class="text-xl font-semibold mb-6 text-center text-gray-800">Where do you want to visit in next 3 months?</h2>
         
         <form id="surveyForm" class="space-y-4">
-            <div class="grid grid-cols-3 gap-3">
-                <div class="destination-card cursor-pointer" data-destination="Kashmir">
-                    <div class="border rounded-lg p-3 text-center hover:bg-blue-100 transition">
-                        <span class="block text-lg font-medium text-gray-700">Kashmir</span>
+            <div class="grid  grid-cols-2 md:grid-cols-2 gap-3">
+                <div class="destination-card shadow-3xl   cursor-pointer mb-4" data-destination="Kashmir">
+                    <div class="border-none  shadow-3xl rounded-lg text-center  transition">
+                        <img src="kashmirInfoImg.jpg" alt="Kashmir" class="rounded-lg w-full h-40 object-cover ">
+                        
                     </div>
                 </div>
-                <div class="destination-card cursor-pointer" data-destination="Shimla">
-                    <div class="border rounded-lg p-3 text-center hover:bg-blue-100 transition">
-                        <span class="block text-lg font-medium text-gray-700">Shimla</span>
+                <div class="destination-card  shadow-3xl  rounded-lg cursor-pointer" data-destination="Goa">
+                    <div class="border-none mb-4 text-center shadow-3xl  rounded-lg  transition">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFLDZ1TqC3nW6rQ6B_fdHEBnYKooG_QsbBoSmXUOkjzWla7m9nVkA9X7uue9etzkMhrC9C3UtgjZTITc3f4qnjJQ2aHzsmyYXdNSxUSjtD0W3tCWfEAKc1vMWvR9HeXB-o8efCpUnkx7UFF639NFhaWn7ophXZ-tFPJxDEFeo7N_k8T01WjX5FmSoK/s796/GOA-TRIP.jpg" alt="Goa" class="w-full h-40 object-cover shadow-xl rounded-lg">
+                        
                     </div>
                 </div>
                 <div class="destination-card cursor-pointer" data-destination="Manali">
-                    <div class="border rounded-lg p-3 text-center hover:bg-blue-100 transition">
-                        <span class="block text-lg font-medium text-gray-700">Manali</span>
+                    <div class="border-none shadow-xl rounded-lg mb-4  text-center hover:bg-blue-100   transition">
+                        <img src="https://i.ytimg.com/vi/7NKk41YVWyA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDNPJFJDXtCyVjPDtzARd1lcUe_4Q" class="w-full h-40 object-cover rounded-lg" alt="Manali">
+                    </div>
+                </div>
+
+                <div class="destination-card cursor-pointer" data-destination="Kerela">
+                    <div class="border-none shadow-xl rounded-lg mb-4  text-center hover:bg-blue-100   transition">
+                        <img src="kerela.jpg" class="w-full h-40 object-cover rounded-lg" alt="Manali">
                     </div>
                 </div>
             </div>
@@ -58,8 +66,8 @@
 
         destinationCards.forEach(card => {
             card.addEventListener('click', () => {
-                destinationCards.forEach(c => c.querySelector('div').classList.remove('bg-blue-200'));
-                card.querySelector('div').classList.add('bg-blue-200');
+                destinationCards.forEach(c => c.querySelector('div').classList.remove('scale-105'));
+                card.querySelector('div').classList.add('scale-105');
                 selectedDestinationInput.value = card.dataset.destination;
             });
         });
@@ -71,12 +79,10 @@
             e.preventDefault();
             const formData = new FormData(form);
             
-            // Add loading state to button
             const submitButton = form.querySelector('button');
             submitButton.disabled = true;
             submitButton.innerHTML = 'Submitting...';
 
-            // Set up timeout
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 10000);
 
@@ -87,14 +93,12 @@
             })
             .then(response => {
                 clearTimeout(timeoutId);
-                // Always redirect, log if needed
                 console.log('Submission response:', response);
                 window.location.href = 'https://www.sabgumo.com';
             })
             .catch(error => {
                 clearTimeout(timeoutId);
                 
-                // Reset button state
                 submitButton.disabled = false;
                 submitButton.innerHTML = 'Submit';
 
@@ -104,7 +108,6 @@
                     console.error('Submission error:', error);
                 }
                 
-                // Still redirect in case of error
                 window.location.href = 'https://www.sabgumo.com';
             });
         });
