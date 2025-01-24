@@ -66,8 +66,8 @@
 
         destinationCards.forEach(card => {
             card.addEventListener('click', () => {
-                destinationCards.forEach(c => c.querySelector('div').classList.remove('scale-105'));
-                card.querySelector('div').classList.add('scale-105');
+                destinationCards.forEach(c => c.querySelector('div').classList.remove('scale-110'));
+                card.querySelector('div').classList.add('scale-110');
                 selectedDestinationInput.value = card.dataset.destination;
             });
         });
