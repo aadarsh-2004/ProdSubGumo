@@ -18,7 +18,7 @@ const HeroSection = () => {
           {/* Text Section */}
           <div className="w-1/2 md:w-6/12 font-Volkhov flex flex-col items-start text-left md:text-left md:py-6">
             <h4 className="text-[12px] md:text-[22px] font-bold text-red-600 mb-3 animate-fade-in">
-              #SabkeSabGumenga
+              #SabkeSabGumenge
             </h4>
             <h1 className="text-[25px] md:text-[60px] font-extrabold leading-tight mb-6 animate-slide-in">
               Discover new <span className="bg-gradient-to-r from-purple-600 to-orange-600 bg-clip-text text-clip-border text-transparent ">destinations</span>, experiences, and cultures with us
