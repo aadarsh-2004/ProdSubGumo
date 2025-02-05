@@ -12,28 +12,25 @@
         <h2 class="text-xl font-semibold mb-6 text-center text-gray-800">Where do you want to visit in next 3 months?</h2>
         
         <form id="surveyForm" class="space-y-4">
-            <div class="grid  grid-cols-1 md:grid-cols-2 gap-3">
-                <div class="destination-card shadow-3xl   cursor-pointer mb-4" data-destination="Kashmir">
-                    <div class="border-none  shadow-3xl rounded-lg text-center  transition">
-                        <img src="kashmirInfoImg.jpg" alt="Kashmir" class="rounded-lg w-full h-40 object-cover ">
-                        
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div class="destination-card cursor-pointer mb-4" data-destination="Kashmir">
+                    <div class="border-2 border-transparent shadow-xl rounded-lg text-center transition duration-300">
+                        <img src="kashmirInfoImg.jpg" alt="Kashmir" class="rounded-lg w-full h-40 object-cover">
                     </div>
                 </div>
-                <div class="destination-card  shadow-3xl  rounded-lg cursor-pointer" data-destination="Goa">
-                    <div class="border-none mb-4 text-center shadow-3xl  rounded-lg  transition">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFLDZ1TqC3nW6rQ6B_fdHEBnYKooG_QsbBoSmXUOkjzWla7m9nVkA9X7uue9etzkMhrC9C3UtgjZTITc3f4qnjJQ2aHzsmyYXdNSxUSjtD0W3tCWfEAKc1vMWvR9HeXB-o8efCpUnkx7UFF639NFhaWn7ophXZ-tFPJxDEFeo7N_k8T01WjX5FmSoK/s796/GOA-TRIP.jpg" alt="Goa" class="w-full h-40 object-cover shadow-xl rounded-lg">
-                        
+                <div class="destination-card cursor-pointer" data-destination="Goa">
+                    <div class="border-2 border-transparent shadow-xl rounded-lg text-center transition duration-300">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFLDZ1TqC3nW6rQ6B_fdHEBnYKooG_QsbBoSmXUOkjzWla7m9nVkA9X7uue9etzkMhrC9C3UtgjZTITc3f4qnjJQ2aHzsmyYXdNSxUSjtD0W3tCWfEAKc1vMWvR9HeXB-o8efCpUnkx7UFF639NFhaWn7ophXZ-tFPJxDEFeo7N_k8T01WjX5FmSoK/s796/GOA-TRIP.jpg" alt="Goa" class="w-full h-40 object-cover rounded-lg">
                     </div>
                 </div>
                 <div class="destination-card cursor-pointer" data-destination="Manali">
-                    <div class="border-none shadow-xl rounded-lg mb-4  text-center hover:bg-blue-100   transition">
+                    <div class="border-2 border-transparent shadow-xl rounded-lg text-center transition duration-300">
                         <img src="https://i.ytimg.com/vi/7NKk41YVWyA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDNPJFJDXtCyVjPDtzARd1lcUe_4Q" class="w-full h-40 object-cover rounded-lg" alt="Manali">
                     </div>
                 </div>
-
                 <div class="destination-card cursor-pointer" data-destination="Kerela">
-                    <div class="border-none shadow-xl rounded-lg mb-4  text-center hover:bg-blue-100   transition">
-                        <img src="kerela.jpg" class="w-full h-40 object-cover rounded-lg" alt="Manali">
+                    <div class="border-2 border-transparent shadow-xl rounded-lg text-center transition duration-300">
+                        <img src="kerela.jpg" class="w-full h-40 object-cover rounded-lg" alt="Kerela">
                     </div>
                 </div>
             </div>
@@ -66,8 +63,21 @@
 
         destinationCards.forEach(card => {
             card.addEventListener('click', () => {
-                destinationCards.forEach(c => c.querySelector('div').classList.remove('scale-110'));
-                card.querySelector('div').classList.add('scale-110');
+                // Remove selection styling from all cards
+                destinationCards.forEach(c => {
+                    const cardDiv = c.querySelector('div');
+                    cardDiv.classList.remove('scale-110');
+                    cardDiv.classList.remove('border-gray-800');
+                    cardDiv.classList.add('border-transparent');
+                    cardDiv.classList.add('border-4');
+                });
+                
+                // Add selection styling to clicked card
+                const cardDiv = card.querySelector('div');
+                cardDiv.classList.add('scale-110');
+                cardDiv.classList.remove('border-transparent');
+                cardDiv.classList.add('border-gray-800');
+                cardDiv.classList.add('border-4');
                 selectedDestinationInput.value = card.dataset.destination;
             });
         });
