@@ -67,7 +67,7 @@
                 destinationCards.forEach(c => {
                     const cardDiv = c.querySelector('div');
                     cardDiv.classList.remove('scale-110');
-                    cardDiv.classList.remove('border-gray-800');
+                    cardDiv.classList.remove('border-orange-600');
                     cardDiv.classList.add('border-transparent');
                     cardDiv.classList.add('border-4');
                 });
@@ -76,7 +76,7 @@
                 const cardDiv = card.querySelector('div');
                 cardDiv.classList.add('scale-110');
                 cardDiv.classList.remove('border-transparent');
-                cardDiv.classList.add('border-gray-800');
+                cardDiv.classList.add('border-orange-600');
                 cardDiv.classList.add('border-4');
                 selectedDestinationInput.value = card.dataset.destination;
             });
