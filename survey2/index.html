@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SabGumo Travel Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-blue-100 via-gray-50 to-white min-h-screen py-12">
+    <div class="container mx-auto px-4 max-w-md">
+        <!-- Main Container with Gold Border -->
+        <div class="bg-white rounded-2xl shadow-2xl shadow-blue-500 overflow-hidden border-none relative">
+            <!-- Decorative Corner Elements -->
+            <div class="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-amber-500 rounded-tl-xl"></div>
+            <div class="absolute top-0 right-0 w-12 h-12 border-t-4 border-r-4 border-amber-500 rounded-tr-xl"></div>
+            <div class="absolute bottom-0 left-0 w-12 h-12 border-b-4 border-l-4 border-amber-500 rounded-bl-xl"></div>
+            <div class="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-amber-500 rounded-br-xl"></div>
+
+            <!-- Image Container with Overlay -->
+            <div class="relative">
+                <img src="poster.png" alt="Trip Details" class="w-full object-cover"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+            
+            <!-- Form Section -->
+            <div class="p-8 relative">
+                <!-- Elegant Logo Title -->
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl font-serif tracking-wide ">
+                        <span class="font-semibold">Sab<span class="font-semibold text-orange-500">G</span>umo
+                    </h1>
+                    <div class="w-16 h-0.5 bg-amber-400 mx-auto mt-2"></div>
+                </div>
+                
+                <form id="surveyForm" class="space-y-6">
+                    <div class="relative">
+                        <label class="block text-sm font-medium text-gray-700 mb-2 tracking-wide">
+                            Email or Mobile Number
+                        </label>
+                        <div class="relative ">
+                            <input 
+                                type="text" 
+                                name="contact" 
+                                required 
+                                class="w-full shadow-md px-4 py-3 border-2 border-gray-200 focus:border-amber-400 outline-none transition-colors bg-gray-50/30 rounded-lg"
+                                placeholder="Enter your details"
+                            >
+                            <i class="fas fa-envelope absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        </div>
+                    </div>
+
+                    <button 
+                        type="submit" 
+                        class="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white py-3 rounded-lg hover:from-amber-600 hover:to-amber-700 transition-all duration-300 shadow-lg hover:shadow-xl font-medium tracking-wide"
+                    >
+                        Enquire Now
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwXYRv528k3pENeQRq1NWriw7d5cCzRfZTSKyRtsqDG7hzW23rnNSr7SG8go2JHtnNF/exec';
+        const form = document.getElementById('surveyForm');
+        
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('button');
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Processing...';
+
+            fetch(scriptURL, { 
+                method: 'POST', 
+                body: formData 
+            })
+            .then(response => {
+                window.location.href = 'https://www.sabgumo.com/destination/3';
+            })
+            .catch(error => {
+                submitButton.disabled = false;
+                submitButton.innerHTML = 'Reserve Your Experience';
+                console.error('Error:', error);
+                window.location.href = 'https://www.sabgumo.com';
+            });
+        });
+    </script>
+</body>
+</html>
