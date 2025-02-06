@@ -266,55 +266,100 @@ export const DestinationsData = [
         activities: [
           {
             time: "Morning",
-            description: "Arrive in Manali and check into your hotel",
+            title: "Welcome to Manali",
+            description: "Upon arrival in Manali, our representative will greet you and escort you to your comfortable hotel for check-in. Take some time to settle in and refresh yourself.",
           },
           {
             time: "Afternoon",
-            description: "Visit the Hadimba Devi Temple",
+            title: "Ancient Temple Visit",
+            description: "Visit the historic Hadimba Devi Temple, a unique 16th-century wooden temple dedicated to Goddess Hadimba, set amidst a beautiful cedar forest.",
           },
           {
             time: "Evening",
-            description: "Explore Mall Road and local markets",
+            title: "Local Market Experience",
+            description: "Explore the vibrant Mall Road, where you can shop for local handicrafts, try authentic Himachali cuisine, and immerse yourself in the local culture.",
+          },
+          {
+            time: "Meal",
+            title: "Welcome Dinner",
+            description: "Enjoy a delicious dinner at the hotel featuring local Himachali specialties.",
           },
         ],
       },
       {
         day: 2,
-        title: "Solang Valley Adventure",
+        title: "Adventure at Solang Valley and Rohtang Pass",
         activities: [
           {
             time: "Morning",
-            description: "Visit Solang Valley for adventure activities",
+            title: "Solang Valley Adventure",
+            description: "After breakfast, head to the picturesque Solang Valley for an exciting day of adventure sports including paragliding, zorbing, and skiing (seasonal activities). [Breakfast Included]",
           },
           {
             time: "Afternoon",
-            description: "Enjoy paragliding and other sports",
+            title: "Rohtang Pass Expedition",
+            description: "Drive to the magnificent Rohtang Pass (subject to weather conditions) to witness breathtaking views of snow-capped peaks and enjoy snow activities.",
           },
           {
             time: "Evening",
-            description: "Return to hotel for dinner",
+            title: "Return to Manali",
+            description: "Head back to Manali for a relaxing evening. Unwind at the hotel after an adventurous day.",
+          },
+          {
+            time: "Meal",
+            title: "Dinner Experience",
+            description: "Savor a warm dinner at the hotel while sharing stories of your adventurous day.",
           },
         ],
       },
       {
         day: 3,
-        title: "Rohtang Pass Excursion",
+        title: "Cultural Tour of Kullu and Naggar",
         activities: [
           {
             time: "Morning",
-            description: "Drive to Rohtang Pass",
+            title: "Kullu Adventure",
+            description: "Start your day with an exciting river rafting session on the Beas River, followed by a visit to the famous Pashmina Shawl Factory to witness traditional craftsmanship.",
           },
           {
             time: "Afternoon",
-            description: "Snow activities and sightseeing",
+            title: "Historical Naggar Tour",
+            description: "Explore the historic Naggar Castle, a beautiful blend of European and Himalayan architecture, and visit the Roerich Art Gallery to admire local artwork.",
           },
           {
             time: "Evening",
-            description: "Return to Manali",
+            title: "Manali Return",
+            description: "Return to Manali for a peaceful evening. Take time to relax and reflect on your cultural experiences.",
+          },
+          {
+            time: "Note",
+            title: "Meals: Breakfast & Dinner",
+            description: "Start your day with a hearty breakfast and end it with a delightful dinner at the hotel.",
           },
         ],
       },
-    ],
+      {
+        day: 4,
+        title: "Departure Day",
+        activities: [
+          {
+            time: "Morning",
+            title: "Final Manali Experience",
+            description: "Visit the ancient Vashisht Temple, known for its hot springs and spiritual significance. Take a relaxing dip in the natural hot springs if you wish.",
+          },
+          {
+            time: "Afternoon",
+            title: "Farewell to Manali",
+            description: "After checkout, bid farewell to the beautiful mountain town as you depart with cherished memories of your Manali adventure.",
+          },
+          {
+            time: "Note",
+            title: "Meals: Breakfast",
+            description: "Enjoy your final breakfast in Manali before departure.",
+          },
+        ],
+      },
+    ]
   },
   {
     id: 4,
