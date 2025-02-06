@@ -3,8 +3,9 @@ import kashmirInfoImg from "../assets/kashmirInfoImg.jpg";
 import JaiselmerCardImg from "../assets/JaiselmerCardImg.jpg";
 import JaiselmerInfoImg from "../assets/JaiselmerInfoImg.jpg";
 
-import ManaliCoverImg from "../assets/ManaliCoverImg.jpg";
+// import ManaliCoverImg from "../assets/ManaliCoverImg.jpg";
 import ManaliInfoImg from "../assets/ManaliInfoImg.jpg";
+import ManaliCoverImg from "../assets/image.png";
 
 import GoaCoverImg from "../assets/GoaCoverImg.jpg";
 import GoaInfoImg from "../assets/GoaInfoImg.jpg";
