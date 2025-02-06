@@ -250,8 +250,8 @@ export const DestinationsData = [
     subTitle:
       "Nestled in the northernmost region of India, Kashmir is renowned as Paradise on Earth for its breathtaking landscapes, serene valleys, and majestic mountains. Surrounded by the snow-capped peaks of the Himalayas and the Pir Panjal range, Kashmir is a haven for nature lovers, adventure seekers, and peace enthusiasts.",
 
-    originalCost: "6999",
-    cost: "4990",
+    originalCost: "14999",
+    cost: "7999",
     isUpcoming: false,
 
     duration: "Approx 5-night trip",
@@ -324,8 +324,8 @@ export const DestinationsData = [
     title: "Goa",
     CardsubTitle: "Sun, Sand, and Stories That'll Keep You Dancing Till Dawn!",
     subTitle:"Goa, a vibrant coastal state in western India, is renowned for its pristine beaches, lively nightlife, rich Portuguese heritage, and serene backwaters. Nestled between the Arabian Sea and the Western Ghats, Goa is a dream destination for travelers seeking relaxation, adventure, and culture. Its tropical climate, diverse cuisine, and warm hospitality make it one of India's most popular tourist hubs.",
-    originalCost: "6999",
-    cost: "4990",
+    originalCost: "13999",
+    cost: "7999",
     duration: "Approx 4-night trip",
     isUpcoming: false,
     description:
