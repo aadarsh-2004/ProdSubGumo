@@ -38,9 +38,13 @@
             <input type="hidden" id="selectedDestination" name="destination">
 
             <div>
-                <label class="block text-sm font-medium text-gray-700">Email or Mobile Number</label>
+                <label class="block text-sm font-medium text-gray-700">Mobile Number</label>
                 <input 
-                    type="text" 
+                    type="number" 
+
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    maxLength="10"
                     id="contact" 
                     name="contact" 
                     required 
