@@ -6,6 +6,15 @@
     <title>SabGumo Travel Experience</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Add Vercel Analytics Script -->
+    <script defer src="https://cdn.vercel-insights.com/analytics.js"></script>
+    <script>
+        // Initialize Vercel Analytics (inject function)
+        if (window.VercelAnalytics) {
+            window.VercelAnalytics.inject();
+        }
+    </script>
 </head>
 <body class="bg-gradient-to-b from-blue-100 via-gray-50 to-white min-h-screen py-12">
     <div class="container mx-auto px-4 max-w-md">
@@ -88,12 +97,5 @@
         });
     </script>
 
-
-
-
-    <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
