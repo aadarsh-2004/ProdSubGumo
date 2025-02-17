@@ -368,6 +368,7 @@ export const DestinationsData = [
   {
     id: 4,
     name: "Goa",
+    distance: "1286 km",
     Cardimg: GoaCoverImg,
     img: GoaInfoImg,
     title: "Goa",
@@ -459,6 +460,7 @@ export const DestinationsData = [
   {
     id: 5,
     name: "Udaipur",
+    distance: "1286 km",
     Cardimg: UdaipurCoverImg,
     img: UdaipurInfoImg,
     title: "उदयपुर की सैर",
@@ -511,6 +513,7 @@ export const DestinationsData = [
   {
     id: 6,
     name: "Nainital",
+    distance: "1286 km",
     Cardimg: NainitalCardImg,
     img: NainitalInfoImg,
     title: "नैनीताल भ्रमण",
@@ -561,6 +564,7 @@ export const DestinationsData = [
   },
   {
     id: 7,
+    distance: "1286 km",
     name: "Kerala",
     Cardimg: KerelaCoverImg,
     img: KerelaInfoImg,
