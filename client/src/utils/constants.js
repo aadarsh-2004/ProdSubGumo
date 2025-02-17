@@ -51,6 +51,7 @@ export const DestinationsData = [
   {
     id: 1,
     name: "Kashmir",
+    distance: "1286 km",
     Cardimg: KashmirCardImg,
     img: kashmirInfoImg,
     title: "Chalo Kashmir",
@@ -187,6 +188,7 @@ export const DestinationsData = [
   {
     id: 2,
     name: "Jaisalmer",
+    distance: "508 km",
     Cardimg: JaiselmerCardImg,
     img: JaiselmerInfoImg,
     title: "जैसलमेर चलीए",
@@ -244,6 +246,7 @@ export const DestinationsData = [
   {
     id: 3,
     name: "Manali",
+    distance: "1125 km",
     Cardimg: ManaliCoverImg,
     img: ManaliInfoImg,
     title: "Manali Ki Vaadiyon Mein",
