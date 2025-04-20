@@ -1,0 +1,12 @@
+/* ModalStyles.css */
+@media (max-width: 640px) {
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
+  
